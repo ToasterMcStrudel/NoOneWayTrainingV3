@@ -71,11 +71,6 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="col">
-              <Link href="/About" onClick={() => setNavbar(!navbar)}>
-                About
-              </Link>
-            </div>
-            <div className="col">
               <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                 Contact
               </Link>
