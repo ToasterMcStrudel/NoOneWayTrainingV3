@@ -40,25 +40,26 @@ const Navbar = () => {
     <div className="container-fluid">
       <div className='row'>
         <div className='col'>
+
         <nav >
           <div className='row'>
             <div className='col'>
               <Link href="/">
                 <Image src="/images/Logo-01.png"
-                            alt="logo"
-                            width={300}
-                            height={300}
-                            className='mx-auto d-block' />
+                        alt="logo"
+                        width={300}
+                        height={300}
+                        className='mx-auto d-block' />
               </Link>
-              
             </div>
           </div>
-          <div className="row py-3 bg-primary rounded-top">     
+          
+          <div className="row py-3 bg-primary rounded-top">    
             <div className="col">
-              <Link href="/About" onClick={() => setNavbar(!navbar)}>
-                About
+              <Link href="/" onClick={() => setNavbar(!navbar)}>
+                Home
               </Link>
-            </div>
+            </div> 
             <div className="col">
               <Link href="/Philosophy" onClick={() => setNavbar(!navbar)}>
                 Philosopy
@@ -70,6 +71,11 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="col">
+              <Link href="/About" onClick={() => setNavbar(!navbar)}>
+                About
+              </Link>
+            </div>
+            <div className="col">
               <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                 Contact
               </Link>
@@ -78,7 +84,8 @@ const Navbar = () => {
         </nav>
         </div>
       </div>
-      <div className='row pt-2 bg-secondary'/>
+
+      <div className='row pt-1 bg-secondary'/>
             
     </div>
   );

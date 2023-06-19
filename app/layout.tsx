@@ -1,6 +1,7 @@
 import '../styles/customColors.scss'
 import './globals.scss'
 import Navbar from '../componets/Navbar'
+import Footer from '@/componets/Footer'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,14 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <body className={inter.className}>
-          <div className='row'>
-            <div className='col '>
-              <Navbar />
-              {children}
-            </div>
-          </div> 
-        </body>
+      <body className={inter.className}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+      </body>
     </html>
   )
 }
