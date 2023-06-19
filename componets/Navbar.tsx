@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 
 const links = [
   {
@@ -34,21 +35,51 @@ const links = [
 
 const Navbar = () => {
 
+  const [navbar, setNavbar] = useState(false);
   return (
-    <div className="container-fluid bg-primary" >
-      <div className='container  justify-between items-center'>
-      <Link href="/" >
-        Logo
-      </Link>
-      <div >
-        {links.map((link) => (
-          <Link key={link.id} href={link.url} >
-            {link.title}
-          </Link>
-        ))}
-        
+    <div className="container-fluid">
+      <div className='row'>
+        <div className='col'>
+        <nav >
+          <div className='row'>
+            <div className='col'>
+              <Link href="/">
+                <Image src="/images/Logo-01.png"
+                            alt="logo"
+                            width={300}
+                            height={300}
+                            className='mx-auto d-block' />
+              </Link>
+              
+            </div>
+          </div>
+          <div className="row py-3 bg-primary rounded-top">     
+            <div className="col">
+              <Link href="/About" onClick={() => setNavbar(!navbar)}>
+                About
+              </Link>
+            </div>
+            <div className="col">
+              <Link href="/Philosophy" onClick={() => setNavbar(!navbar)}>
+                Philosopy
+              </Link>
+            </div>
+            <div className="col">
+              <Link href="/Services" onClick={() => setNavbar(!navbar)}>
+                Services
+              </Link>
+            </div>
+            <div className="col">
+              <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
+                Contact
+              </Link>
+            </div>
+          </div>
+        </nav>
+        </div>
       </div>
-      </div>
+      <div className='row pt-2 bg-secondary'/>
+            
     </div>
   );
 };
