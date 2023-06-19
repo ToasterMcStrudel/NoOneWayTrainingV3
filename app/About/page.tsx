@@ -1,14 +1,17 @@
-import Image from 'next/image'
-import Navbar from './componets/Navbar'
+import React from 'react'
 
-export default function Home() {
+function About() {
   return (
+
     <div className='container-fluid'>
       <div className='row'>
         <div className='col'>
-          Home
+          <div>About</div>
         </div>
       </div>
     </div>
+    
   )
 }
+
+export default About
